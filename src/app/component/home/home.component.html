@@ -1,0 +1,25 @@
+<div class="main-content">
+  <div class="container-content">
+    <h2>Alien Numeral</h2>
+
+    <div class="example-value">
+      <ng-container *ngFor="let val of ArrayText ">
+        <div class="list">{{val}} =  {{fixdata[val]}}</div>
+      </ng-container>
+    </div>
+    <div class="wrap-convert">
+      <div *ngIf="txterror" class="error">ERROR</div>
+      <input
+        type="text"
+        placeholder="Input"
+        [(ngModel)]="text"
+        (input)="TextUppercase()"
+      />
+      <button class="" (click)="onConvert()">Convert to integer</button>
+    </div>
+
+    <div *ngIf="output && output !== null" class="">
+      <strong>Output : </strong> {{ output }}
+    </div>
+  </div>
+</div>
